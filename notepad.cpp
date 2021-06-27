@@ -75,3 +75,9 @@ void Notepad::on_actionPrint_triggered()
     ui->textEdit->print(&printer);
 }
 
+
+void Notepad::on_actionExit_triggered()
+{
+    QApplication::quit();
+}
+
