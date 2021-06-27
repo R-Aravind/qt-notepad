@@ -28,6 +28,10 @@ private slots:
 
     void on_actionOpen_triggered();
 
+    void on_actionSave_As_triggered();
+
+    void on_actionPrint_triggered();
+
 private:
     Ui::Notepad *ui;
     QString currentFile = "";

@@ -60,3 +60,18 @@ void Notepad::on_actionSave_As_triggered()
     file.close();
 }
 
+
+void Notepad::on_actionPrint_triggered()
+{
+    QPrinter printer;
+    printer.setPrinterName("");
+    QPrintDialog pDialog(&printer, this);
+
+    if(pDialog.exec() == QDialog::Rejected) {
+        QMessageBox::warning(this, "Warning", "Cannot print file");
+        return;
+    }
+
+    ui->textEdit->print(&printer);
+}
+
